@@ -14,7 +14,7 @@ variable "instance_type" {
     default = "t3.micro"
 }
 
-variable "aws_subnet" {
+variable "subnet" {
   description = "AWS Subnet"
   type        = string
   default     = "<SUBNET_ID>"
