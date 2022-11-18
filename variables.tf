@@ -4,7 +4,7 @@ variable "instance_count" {
   default     = 2
 }
 
-variable "ami_id" {
+variable "ami" {
     type = string
     default = "ami-0729e439b6769d6ab"
 }
