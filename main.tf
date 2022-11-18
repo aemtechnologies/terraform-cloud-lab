@@ -15,10 +15,10 @@ provider "aws" {
 }
 
 resource "aws_instance" "inst" {
-  count         = var.count
+  count         = var.instance_count
   ami           = var.ami
   instance_type = var.instance_type
-  subnet_id     = var.subnet_id
+  subnet_id     = var.subnet
 
   tags = {
     Name = "TERRAFORM-GURU-${count.index}"
