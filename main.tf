@@ -15,10 +15,10 @@ provider "aws" {
 }
 
 resource "aws_instance" "inst" {
-  count         = var.instance_count
-  ami           = var.ami
-  instance_type = var.instance_type
-  subnet_id     = var.subnet
+  instance_count = var.instance_count
+  ami            = var.ami
+  instance_type  = var.instance_type
+  subnet_id      = var.subnet
 
   tags = {
     Name = "TERRAFORM-GURU-${count.index}"
@@ -31,18 +31,18 @@ variable "instance_count" {
 }
 
 variable "ami" {
-    type = string
-    default = "ami-0729e439b6769d6ab"
+  type    = string
+  default = "ami-0729e439b6769d6ab"
 }
 
 variable "instance_type" {
-    type = string
-    default = "t3.micro"
+  type    = string
+  default = "t3.micro"
 }
 
 variable "subnet" {
-  type        = string
-  default     = "<SUBNET_ID>"
+  type    = string
+  default = "<SUBNET_ID>"
 }
 
 output "aws_instances" {
