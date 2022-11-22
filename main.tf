@@ -25,6 +25,26 @@ resource "aws_instance" "inst" {
   }
 }
 
+variable "instance_count" {
+  type        = string
+  default     = 2
+}
+
+variable "ami" {
+    type = string
+    default = "ami-0729e439b6769d6ab"
+}
+
+variable "instance_type" {
+    type = string
+    default = "t3.micro"
+}
+
+variable "subnet" {
+  type        = string
+  default     = "<SUBNET_ID>"
+}
+
 output "aws_instances" {
   value = aws_instance.inst.*.tags.Name
 }
