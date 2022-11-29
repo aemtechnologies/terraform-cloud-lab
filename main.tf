@@ -15,7 +15,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "inst" {
-  count = var.instance_count
+  count          = var.instance_count
   ami            = var.ami
   instance_type  = var.instance_type
   subnet_id      = var.subnet
