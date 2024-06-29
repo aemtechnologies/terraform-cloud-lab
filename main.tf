@@ -21,7 +21,7 @@ resource "aws_instance" "inst" {
   subnet_id      = var.subnet
 
   tags = {
-    Name = "TERRAFORM-GURU-${count.index}"
+    Name = "instance-${count.index}"
   }
 }
 
